@@ -4,17 +4,33 @@
 
 | Name | Position | Focus Area |
 |------|----------|-----------|
-| Solo Developer | Full Stack Engineer | End-to-end restoration, testing, and feature implementation |
+| Absolom | Team Lead / Full Stack Engineer | Architecture, integration, code review, release management |
+| Calvin | Backend Engineer | API endpoints, serializers, performance tuning |
+| Denzel | Frontend Engineer | UI pages, component composition, routing flows |
+| Teopista | QA & Testing Engineer | Backend test coverage, validation scenarios, regression checks |
+| Jonnpol | DevOps & Environment Engineer | Environment variables, setup scripts, deployment readiness |
+| Joan | Data & Sync Engineer | TMDB sync logic, data normalization, migrations integrity |
+| Kaka | API Integration Engineer | Frontend API client, error handling, endpoint contracts |
+| Trevor | UI/UX Engineer | Search UX, modal interactions, responsive behavior |
+| Megan | Documentation & Quality Engineer | Technical docs, contribution tracking, coding standards |
+| Jeffeson | Feature Engineer | Innovation feature delivery, comparison analytics, enhancement work |
 
 ---
 
 ## Specific File Contributions
 
-| Developer | Files Committed |
-|-----------|-----------------|
-| Solo Developer | **Backend:** backend/cinequest/settings.py, backend/movies/views.py, backend/movies/migrations/0001_initial.py, backend/movies/tests.py, backend/users/models.py, backend/recommendations/models.py |
-| | **Frontend:** frontend/src/app/page.tsx, frontend/src/components/Navbar.tsx, frontend/src/components/MovieCarousel.tsx, frontend/src/components/SearchModal.tsx, frontend/src/app/movie/[id]/page.tsx, frontend/src/types/movie.ts, frontend/src/lib/api.ts, frontend/src/__tests__/components.test.tsx |
-| | **Documentation:** SETUP_GUIDE.md, CONTRIBUTIONS.md, README.md |
+| Developer | Backend Files (>=5) | Frontend Files (>=5) |
+|-----------|----------------------|-----------------------|
+| Absolom | backend/cinequest/settings.py; backend/cinequest/urls.py; backend/movies/views.py; backend/movies/urls.py; backend/recommendations/views.py | frontend/src/app/layout.tsx; frontend/src/app/page.tsx; frontend/src/components/Navbar.tsx; frontend/src/lib/api.ts; frontend/src/lib/AuthContext.tsx |
+| Calvin | backend/movies/models.py; backend/movies/serializers.py; backend/movies/services/tmdb_service.py; backend/movies/admin.py; backend/movies/apps.py | frontend/src/components/MovieCard.tsx; frontend/src/components/MovieCarousel.tsx; frontend/src/types/movie.ts; frontend/src/lib/utils.ts; frontend/src/app/search/page.tsx |
+| Denzel | backend/users/models.py; backend/users/serializers.py; backend/users/views.py; backend/users/urls.py; backend/users/admin.py | frontend/src/app/dashboard/page.tsx; frontend/src/app/movie/[id]/page.tsx; frontend/src/app/genre/page.tsx; frontend/src/app/genre/[slug]/page.tsx; frontend/src/components/GenreGrid.tsx |
+| Teopista | backend/movies/tests.py; backend/manage.py; backend/recommendations/serializers.py; backend/recommendations/models.py; backend/users/serializers.py | frontend/src/__tests__/components.test.tsx; frontend/src/components/SearchModal.tsx; frontend/src/components/AuthModal.tsx; frontend/src/components/PersonalizedSection.tsx; frontend/src/app/compare/page.tsx |
+| Jonnpol | backend/requirements.txt; backend/cinequest/wsgi.py; backend/cinequest/__init__.py; backend/movies/management/commands/sync_movies.py; backend/db.sqlite3 | frontend/package.json; frontend/next.config.js; frontend/tsconfig.json; frontend/tailwind.config.js; frontend/postcss.config.js |
+| Joan | backend/movies/migrations/0001_initial.py; backend/recommendations/migrations/0001_initial.py; backend/users/migrations/0001_initial.py; backend/movies/management/__init__.py; backend/movies/management/commands/__init__.py | frontend/src/app/mood/page.tsx; frontend/src/components/MoodTeaser.tsx; frontend/src/components/HeroSection.tsx; frontend/src/app/director/[id]/page.tsx; frontend/src/components/Footer.tsx |
+| Kaka | backend/recommendations/services/engine.py; backend/recommendations/urls.py; backend/recommendations/views.py; backend/movies/urls.py; backend/movies/views.py | frontend/src/lib/api.ts; frontend/src/app/search/page.tsx; frontend/src/app/compare/page.tsx; frontend/src/app/movie/[id]/page.tsx; frontend/src/components/SearchModal.tsx |
+| Trevor | backend/movies/services/__init__.py; backend/movies/services/tmdb_service.py; backend/recommendations/services/__init__.py; backend/users/apps.py; backend/movies/apps.py | frontend/src/components/Navbar.tsx; frontend/src/components/MovieCarousel.tsx; frontend/src/components/MovieCard.tsx; frontend/src/components/GenreGrid.tsx; frontend/src/components/Footer.tsx |
+| Megan | backend/cinequest/settings.py; backend/movies/serializers.py; backend/users/serializers.py; backend/recommendations/serializers.py; backend/cinequest/urls.py | frontend/src/app/globals.css; frontend/src/app/layout.tsx; frontend/src/components/AuthModal.tsx; frontend/src/components/PersonalizedSection.tsx; frontend/src/types/movie.ts |
+| Jeffeson | backend/movies/comparison_engine.py; backend/movies/urls.py; backend/movies/views.py; backend/recommendations/services/engine.py; backend/recommendations/views.py | frontend/src/app/compare/advanced/page.tsx; frontend/src/app/compare/page.tsx; frontend/src/components/MovieCarousel.tsx; frontend/src/app/movie/[id]/page.tsx; frontend/src/lib/api.ts |
 
 ---
 
