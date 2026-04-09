@@ -7,8 +7,17 @@ import type {
   AuthTokens,
   User,
   GenrePreference,
-  WatchlistItem,
 } from "@/types/movie";
+
+type WatchlistItem = {
+  id: number;
+  movie_tmdb_id: number;
+  movie_title: string;
+  poster_path: string;
+  watched?: boolean;
+  created_at?: string;
+  [key: string]: unknown;
+};
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
