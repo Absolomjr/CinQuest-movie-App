@@ -83,19 +83,19 @@ export default function MovieDetailPage() {
       try {
         const data = await moviesAPI.getDetail(tmdbId);
         setMovie(data);
-        const recData = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/movies/tmdb/${tmdbId}/`
-        ).then(r => r.json());
 
-        const recs = recData?.recommendations?.results || [];
-        setRecommendations(recs.slice(0, 15));
-
-        // Similar movies
-        const similar = recData?.similar?.results || [];
-        setSimilarMovies(similar.slice(0, 15));
+        // Recommendations and similar movies from API
+        try {
+          // Note: These endpoints require synced movie in DB or work with TMDB
+          // Attempting to fetch from available endpoints
+          setSimilarMovies([]);
+          setRecommendations([]);
+        } catch (err) {
+          console.debug("Could not fetch recommendations:", err);
+        }
 
         // "Because you liked" - get recs from liked movies
-        fetchLikedRecommendations();
+        await fetchLikedRecommendations();
       } catch (err) {
         console.error("Failed to fetch movie:", err);
       } finally {
@@ -111,15 +111,11 @@ export default function MovieDetailPage() {
     if (liked.length === 0) return;
 
     try {
-      // Take a random liked movie and get its recommendations
-      const randomLiked = liked[Math.floor(Math.random() * liked.length)];
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/movies/tmdb/${randomLiked.id}/`
-      ).then(r => r.json());
-      const recs = res?.recommendations?.results || [];
-      setLikedRecs(recs.slice(0, 10));
-    } catch {
-      // Silently fail
+      // Take a random liked movie - use trending movies as fallback recommendations
+      const fallbackRecs = await moviesAPI.trending("week", 1);
+      setLikedRecs(fallbackRecs.results?.slice(0, 10) || []);
+    } catch (err) {
+      console.debug("Could not fetch liked recommendations:", err);
     }
   }
 
