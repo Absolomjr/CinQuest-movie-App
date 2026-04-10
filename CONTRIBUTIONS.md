@@ -17,7 +17,7 @@
 
 ---
 
-## Specific File Contributions
+## Specific File Contributions of the memebers
 
 | Developer | Backend Files Modified (fixes/improvements) | Frontend/Docs Files Modified (fixes/improvements) |
 |-----------|---------------------------------------------|----------------------------------------------------|

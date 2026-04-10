@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 tmdb = TMDBService()
 sync_service = MovieSyncService()
 
-## Movie ViewSet
+##  The Movie ViewSet
 class MovieViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Movie.objects.prefetch_related("genres", "directors").all()
     permission_classes = [AllowAny]
