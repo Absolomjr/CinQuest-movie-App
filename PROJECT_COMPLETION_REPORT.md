@@ -15,6 +15,7 @@ The CineQuest application has been successfully restored from a "broken masterpi
 - ✅ **23 Backend Tests Created** - Comprehensive coverage of core functionality
 - ✅ **18 Frontend Tests Created** - Component and user interaction validation
 - ✅ **Full Stack Feature Implemented** - Advanced movie comparison analytics
+- ✅ **Dashboard Feature Restored** - Real user interactions now populate analytics reliably, led by Absolom
 - ✅ **Production-Ready Code** - Clean architecture with proper error handling
 - ✅ **Complete Documentation** - Setup guides, API docs, and contribution tracking
 
@@ -89,6 +90,13 @@ The CineQuest application has been successfully restored from a "broken masterpi
 **Issue:** Using raw `fetch()` instead of API layer for recommendations
 **Fix:** Refactored to use `moviesAPI.trending()` and proper error handling
 **Status:** ✅ Refactored
+
+#### 4. **Dashboard Feature Unfunctional**
+**Files:** `frontend/src/app/dashboard/page.tsx`, `frontend/src/app/movie/[id]/page.tsx`, `backend/recommendations/views.py`
+**Issue:** Dashboard relied on backend interactions, but core movie actions were stored only in localStorage, leaving analytics empty/unreliable.
+**Fix:** Wired `like/dislike/watchlist/view` interactions to backend tracking APIs, synced watchlist state with backend, and added dashboard-safe fallback/error handling.
+**Status:** ✅ Restored and stable
+**Owner:** Absolom
 
 ---
 
