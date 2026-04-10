@@ -4,7 +4,7 @@
 
 | Name | Position | Focus Area |
 |------|----------|-----------|
-| Absolom | Team Lead / Full Stack Engineer | Architecture, integration, code review, release management |
+| Absolom | Team Lead / Full Stack Engineer | Architecture, integration, code review, release management, dashboard feature restoration |
 | Calvin | Backend Engineer | API endpoints, serializers, performance tuning |
 | Denzel | Frontend Engineer | UI pages, component composition, routing flows |
 | Teopista | QA & Testing Engineer | Backend test coverage, validation scenarios, regression checks |
@@ -58,6 +58,10 @@
 - Added global keyboard shortcut handler for ⌘K/Ctrl+K to toggle search modal (frontend/src/components/Navbar.tsx)
 - Added missing TypeScript type definitions (WatchlistItem, UserMovieInteraction) (frontend/src/types/movie.ts)
 - Refactored direct fetch calls to use API layer instead (frontend/src/app/movie/[id]/page.tsx)
+- Repaired Dashboard feature: connected movie interactions/watchlist actions to backend analytics and added error-safe dashboard rendering (frontend/src/app/dashboard/page.tsx, frontend/src/app/movie/[id]/page.tsx, backend/recommendations/views.py)
+
+**Dashboard Contribution Ownership:**
+- Absolom led the Dashboard restoration and frontend integration work.
 
 **Commits:**
 4. `fix: correct HeroSection trending prop initialization as array`
