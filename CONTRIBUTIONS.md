@@ -6,8 +6,8 @@
 |------|----------|-----------|
 | Absolom | Team Lead / Full Stack Engineer | Architecture, integration, code review, release management, dashboard feature restoration |
 | Calvin | Backend Engineer | API endpoints, serializers, performance tuning |
-| Denzel | Frontend Engineer | UI pages, component composition, routing flows |
-| Teopista | QA & Testing Engineer | Backend test coverage, validation scenarios, regression checks |
+| Teopista | Frontend Engineer | UI pages, component composition, routing flows |
+|  Denzel| QA & Testing Engineer | Backend test coverage, validation scenarios, regression checks |
 | Jonnpol | DevOps & Environment Engineer | Environment variables, setup scripts, deployment readiness |
 | Joan | Data & Sync Engineer | TMDB sync logic, data normalization, migrations integrity |
 | Kaka | API Integration Engineer | Frontend API client, error handling, endpoint contracts |
@@ -17,14 +17,14 @@
 
 ---
 
-## Specific File Contributions
+## Specific File Contributions of the memebers
 
 | Developer | Backend Files Modified (fixes/improvements) | Frontend/Docs Files Modified (fixes/improvements) |
 |-----------|---------------------------------------------|----------------------------------------------------|
 | Absolom | backend/recommendations/views.py; backend/movies/views.py; backend/movies/urls.py | frontend/src/app/dashboard/page.tsx; frontend/src/app/movie/[id]/page.tsx; frontend/src/lib/api.ts; frontend/src/lib/AuthContext.tsx |
 | Calvin | backend/movies/views.py; backend/movies/migrations/0001_initial.py; backend/movies/tests.py | frontend/src/types/movie.ts; frontend/src/app/page.tsx |
-| Denzel | backend/movies/views.py; backend/recommendations/views.py | frontend/src/app/dashboard/page.tsx; frontend/src/app/movie/[id]/page.tsx; frontend/src/app/genre/page.tsx; frontend/src/app/genre/[slug]/page.tsx |
-| Teopista | backend/movies/tests.py | frontend/src/__tests__/components.test.tsx; frontend/src/components/SearchModal.tsx |
+| Teopista | backend/movies/views.py; backend/recommendations/views.py | frontend/src/app/dashboard/page.tsx; frontend/src/app/movie/[id]/page.tsx; frontend/src/app/genre/page.tsx; frontend/src/app/genre/[slug]/page.tsx |
+| Denzel | backend/movies/tests.py | frontend/src/__tests__/components.test.tsx; frontend/src/components/SearchModal.tsx |
 | Jonnpol | backend/requirements.txt; backend/cinequest/settings.py | frontend/package.json; frontend/next.config.js; frontend/tsconfig.json; frontend/tailwind.config.js; frontend/postcss.config.js |
 | Joan | backend/movies/migrations/0001_initial.py; backend/movies/management/commands/sync_movies.py | frontend/src/app/page.tsx; frontend/src/components/HeroSection.tsx |
 | Kaka | backend/movies/views.py; backend/recommendations/views.py; backend/recommendations/urls.py | frontend/src/lib/api.ts; frontend/src/app/search/page.tsx; frontend/src/app/movie/[id]/page.tsx |
