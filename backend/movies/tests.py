@@ -3,10 +3,10 @@ Comprehensive test suite for Movies API.
 Tests cover key endpoints, model logic, and data synchronization behavior.
 """
 
-from django.test import TestCase, APIClient
+from django.test import TestCase
 from django.contrib.auth import get_user_model
 from rest_framework import status
-from rest_framework.test import APITestCase
+from rest_framework.test import APITestCase, APIClient
 from datetime import datetime
 
 from .models import Movie, Genre, Person, MovieCast
@@ -170,9 +170,10 @@ class MovieAPITests(APITestCase):
         """Test that genre list endpoint returns all genres."""
         response = self.client.get('/api/movies/genres/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertGreaterEqual(len(response.data), 1)
+        items = response.data.get('results', response.data) if isinstance(response.data, dict) else response.data
+        self.assertGreaterEqual(len(items), 1)
         # Check that our created genre is in the results
-        genre_names = [g['name'] for g in response.data]
+        genre_names = [g['name'] for g in items]
         self.assertIn('Action', genre_names)
 
     def test_mood_list_endpoint(self):

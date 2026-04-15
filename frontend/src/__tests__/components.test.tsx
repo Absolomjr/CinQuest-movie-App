@@ -10,6 +10,25 @@ import MovieCarousel from '@/components/MovieCarousel';
 import SearchModal from '@/components/SearchModal';
 import type { MovieCompact } from '@/types/movie';
 
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({
+    push: jest.fn(),
+    replace: jest.fn(),
+    prefetch: jest.fn(),
+    back: jest.fn(),
+    forward: jest.fn(),
+    refresh: jest.fn(),
+  }),
+}));
+
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props: any) => {
+    const { fill, unoptimized, ...imageProps } = props;
+    return <img {...imageProps} />;
+  },
+}));
+
 /**
  * Mock data for testing
  */
@@ -92,7 +111,7 @@ describe('MovieCard Component', () => {
     const card = container.firstChild;
     
     // Check that animation style is applied
-    expect(card).toHaveStyle({ animationDelay: expect.any(String) });
+    expect(card).toHaveStyle({ animationDelay: '150ms' });
   });
 });
 
