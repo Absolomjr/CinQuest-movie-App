@@ -129,3 +129,46 @@ export interface UserMovieInteraction {
   rating: number | null;
   created_at: string;
 }
+
+export interface JourneyDailyPoint {
+  date: string;
+  total: number;
+  by_type: {
+    search: number;
+    view: number;
+    like: number;
+    dislike: number;
+    watchlist: number;
+    watched: number;
+  };
+}
+
+export interface JourneyTypeTotal {
+  type: "search" | "view" | "like" | "dislike" | "watchlist" | "watched";
+  count: number;
+}
+
+export interface JourneyRecentEvent {
+  type: "search" | "view" | "like" | "dislike" | "watchlist" | "watched";
+  movie_tmdb_id: number;
+  movie_title: string;
+  date: string;
+}
+
+export interface JourneySummary {
+  total_events: number;
+  active_days: number;
+  activity_streak_days: number;
+  most_active_day: JourneyDailyPoint | null;
+  top_interaction_type: "search" | "view" | "like" | "dislike" | "watchlist" | "watched";
+  top_interaction_count: number;
+}
+
+export interface JourneyTimelineResponse {
+  window_days: number;
+  summary: JourneySummary;
+  type_totals: JourneyTypeTotal[];
+  timeline: JourneyDailyPoint[];
+  recent_events: JourneyRecentEvent[];
+  insights: string[];
+}
