@@ -7,12 +7,11 @@
 | Absolom | Team Lead / Full Stack Engineer | Architecture, integration, code review, release management, dashboard feature restoration |
 | Calvin | Backend Engineer | API endpoints, serializers, performance tuning |
 | Teopista | Frontend Engineer | UI pages, component composition, routing flows |
-|  Denzel| QA & Testing Engineer | Backend test coverage, validation scenarios, regression checks |
-| Jonnpol | DevOps & Environment Engineer | Environment variables, setup scripts, deployment readiness |
+|  Denzel| Frontend Engineer | Backend test coverage, validation scenarios, regression checks |
+| Jonnpol | Environment Engineer | Environment variables, setup scripts, deployment readiness |
 | Joan | Data & Sync Engineer | TMDB sync logic, data normalization, migrations integrity |
-| Kaka | API Integration Engineer | Frontend API client, error handling, endpoint contracts |
-| Trevor | UI/UX Engineer | Search UX, modal interactions, responsive behavior |
-| Megan | Documentation & Quality Engineer | Technical docs, contribution tracking, coding standards |
+| Kaka | UI/UX Engineer | Frontend API client, error handling, endpoint contracts |
+| Trevor | API Integration Engineer API Integration Engineer | Search UX, modal interactions, responsive behavior |
 | Jeffeson | Feature Engineer | Innovation feature delivery, journey analytics, enhancement work |
 
 ---
