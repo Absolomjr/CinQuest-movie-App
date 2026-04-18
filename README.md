@@ -48,4 +48,3 @@ DEBUG=True
 
 ## TMDB API
 Get your free API key at: https://www.themoviedb.org/settings/api
-# project-based-exam
